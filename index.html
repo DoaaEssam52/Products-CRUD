@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/index_style.css">
+
+</head>
+<body id="bodyWindow">
+  <div class="w_inputs mx-auto py-4">
+    <div class="form-group bg-blue">
+      <label class="">Product Image</label>
+      <input type="file" class="d-block" id="imagee">
+    </div>
+    <div class="form-group bg-blue">
+      <label for="">Product Name</label>
+      <input type="text" class="form-control" id="name">
+      <small id="nameValidation">must be 3 up to 20 letters</small>
+    </div>
+    <div class="form-group bg-blue">
+      <label for="">Product Category</label>
+      <input type="text" class="form-control" id="category">
+      <small id="categoryValidation">must be 3 up to 8 letters</small>
+    </div>
+    <div class="form-group bg-blue">
+      <label for="">Product Price</label>
+      <input type="number" class="form-control" id="price">
+      <small id="priceValidation">must be number greater than 0 and up to 8 characters</small>
+    </div>
+    <div class="form-group bg-blue">
+      <label for="">Product Description</label>
+      <textarea type="number" class="form-control" rows="5" id="desc"></textarea>
+      <small id="descValidation">must start with letter,2-100 characters</small>
+    </div>
+    <div>
+        <label class="mr-2">Sale ?</label>
+          <input type="radio" value="Sale" name="Sale">
+          <label class="ml-1 mr-2">Yes</label>
+          <input type="radio" value="No Sale" name="Sale">
+          <label class="mr-2"for="">No</label>
+    </div>
+    <button class="btn btn-info"onclick="addProduct(this)">Add Product</button>
+  </div>
+  <div class="form-group my-3">
+    <input onkeyup="searchProduct(this)" class="search mx-auto form-control"type="text" placeholder="by product Name">
+  </div>
+  <div class="container mx-auto row mt-5"id="productsShow">
+  </div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/first.js"></script>
+</body>
+
+</html>
